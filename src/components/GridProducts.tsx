@@ -15,7 +15,7 @@ const GridProducts = () => {
   return (
     <div>
       <h1> Product Grid </h1>
-      <ul>
+      <ul className='container grid grid-cols-4'>
         {products.map((item:Products) => (
           <li key={item.id}> 
             <Image src={item.image} width={60} height={195} alt={item.name}></Image>

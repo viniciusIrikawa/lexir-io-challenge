@@ -24,9 +24,15 @@ const ProductCategories = () => {
     <div>
         <h1> Product Categories </h1>
         <div> 
-            <button type="button" onClick={() => fillCategory('All')}> All </button>
-            <button type="button" onClick={() => fillCategory('Gin')}> Gin </button>
-            <button type="button" onClick={() => fillCategory('Vodka')}> Vodka </button>
+            <button type="button" 
+                    onClick={() => fillCategory('All')} 
+                    className="bg-emerald-400 py-1 px-5 mx-2 rounded bg-gray-100"> All </button>
+            <button type="button" 
+                    onClick={() => fillCategory('Gin')} 
+                    className="bg-emerald-400 py-1 px-5 mx-2 rounded bg-gray-100" > Gin </button>
+            <button type="button" 
+                    onClick={() => fillCategory('Vodka')} 
+                    className="bg-emerald-400 py-1 px-5 mx-2 rounded bg-gray-100" > Vodka </button>
         </div>
     </div>
   )
