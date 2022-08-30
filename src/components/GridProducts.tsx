@@ -1,18 +1,20 @@
 import React from 'react'
-import products from '../pages/api/products.json'
-
-
-type dataProducts = {
-  id: number,
-  name: string,
-  price: number,
-  image: string
-}
+import {products} from '../pages/api/products.js'
 
 const GridProducts = () => {
   return (
-    <div>GridProducts</div>
-    // {products.map((product) =>)}
+    <div>
+      <h1> Product Grid </h1>
+      <ul>
+        {products.map( item => (
+          <li key={item.id}> 
+            <img src={item.image} width="150px" height="150px" alt={item.name}/>
+            <h3> {item.name} </h3>  
+            <span> {item.price} </span> 
+          </li>
+        ))}
+      </ul>
+    </div>
   )
 }
 
