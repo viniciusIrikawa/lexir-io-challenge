@@ -1,6 +1,7 @@
 import {products} from '../pages/api/products'
 import Image from 'next/image'
 
+
 interface Products {
   id: number;
   name: string;

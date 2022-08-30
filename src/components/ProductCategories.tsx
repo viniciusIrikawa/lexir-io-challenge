@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import {products} from '../pages/api/products'
 
 // interface Category {
 //     categoryName: string[];
@@ -13,13 +14,19 @@ import React from 'react'
 // const categories:any = Object.values(productCategory)
 // console.log(categories)
 
+
+const fillCategory = (category:string) => {
+    console.log(category)
+}
+
 const ProductCategories = () => {
   return (
     <div>
-        <h1> Sidebar </h1>
+        <h1> Product Categories </h1>
         <div> 
-            <button> Gin </button>
-            <button> Vodka </button>
+            <button type="button" onClick={() => fillCategory('All')}> All </button>
+            <button type="button" onClick={() => fillCategory('Gin')}> Gin </button>
+            <button type="button" onClick={() => fillCategory('Vodka')}> Vodka </button>
         </div>
     </div>
   )
