@@ -21,8 +21,8 @@ const fillCategory = (category:string) => {
 
 const ProductCategories = () => {
   return (
-    <div>
-        <h1> Product Categories </h1>
+    <div className='my-10'>
+        <h1 className='mb-2'> Product Categories </h1>
         <div> 
             <button type="button" 
                     onClick={() => fillCategory('All')} 
