@@ -2,6 +2,7 @@
 import Header from "@components/Header";
 import GridProducts from "@components/GridProducts";
 import Sidebar from "@components/Sidebar";
+import Footer from "@components/Footer";
 
 export default function Home() {
 
@@ -17,6 +18,7 @@ export default function Home() {
 
         </div>
       </main>
+      <Footer/>
     </div>
   );
 }

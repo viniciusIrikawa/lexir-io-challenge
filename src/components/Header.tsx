@@ -6,14 +6,14 @@ const Header = () => {
   const [user, setUser] = useState('John Doe')  
 
   return (
-    <header className='w-screen border-b-4 py-7 px-12 flex justify-between'>
+    <header className='w-full border-b-4 py-7 px-12 flex justify-between items-center'>
         <div>
             <Link href={"/"}> 
                 <a className='text-5xl font-serif'> Lexir </a>
             </Link>
         </div>
         <div>
-            <ul className='flex justify-around uppercase'>
+            <ul className='flex justify-around uppercase '>
                 <li className='mx-5'>
                     <Link href={''}>
                         <a> products </a>
