@@ -1,15 +1,6 @@
 import {products} from '../pages/api/products'
+import {Products} from '../types/typeProducts'
 import Image from 'next/image'
-
-
-interface Products {
-  id: number;
-  name: string;
-  price: number;
-  category: string;
-  quantity: number;
-  image: string;
-}
 
 const GridProducts = () => {
   return (
