@@ -16,11 +16,13 @@ import {products} from '../pages/api/products'
 
 const ProductCategories = () => {
 
-  const [listProducts, setListProducts] = useState(products);
+  // const [listProducts, setListProducts] = useState(products);
   
   const filterCategory = (category:string) => {
     console.log(category)
   }
+
+
   return (
     <div className='my-10'>
         <h1 className='mb-2'> Product Categories </h1>
