@@ -1,34 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 
 const Header = () => {
+
+  const [user, setUser] = useState('John Doe')  
+
   return (
-    <header>
+    <header className='w-screen border-b-4 py-7 px-12 flex justify-between'>
         <div>
             <Link href={"/"}> 
-                <a> Lexir </a>
+                <a className='text-5xl font-serif'> Lexir </a>
             </Link>
         </div>
         <div>
-            <ul>
-                <li>
+            <ul className='flex justify-around uppercase'>
+                <li className='mx-5'>
                     <Link href={''}>
-                        <a> PRODUCTS </a>
+                        <a> products </a>
                     </Link>
                 </li>
-                <li>
+                <li className='mx-5'>
                     <Link href={''}>
-                        <a> BRANDS </a>
+                        <a> brands </a>
                     </Link>
                 </li>
-                <li>
+                <li className='mx-5'>
                     <Link href={''}>
-                        <a> Hello, USER </a>
+                        <a> hello, <span className='font-bold'> {user} </span> </a>
                     </Link>
                 </li>
-                <li>
+                <li className='mx-5'>
                     <Link href={''}>
-                        <span> CART </span>
+                        <span> cart </span>
                     </Link>
                 </li>
             </ul>

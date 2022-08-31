@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import {products} from '../pages/api/products'
+import {ProductContext} from '../Context/ContextProducts'
 
 // interface Category {
 //     categoryName: string[];
@@ -15,9 +16,9 @@ import {products} from '../pages/api/products'
 // console.log(categories)
 
 const ProductCategories = () => {
+  const {listProducts} = useContext(ProductContext);
+  console.log(listProducts)
 
-  // const [listProducts, setListProducts] = useState(products);
-  
   const filterCategory = (category:string) => {
     console.log(category)
   }
@@ -25,7 +26,7 @@ const ProductCategories = () => {
 
   return (
     <div className='my-10'>
-        <h1 className='mb-2'> Product Categories </h1>
+        <h4 className='mb-2 text-base'> Product Categories </h4>
         <div> 
             <button type="button" 
                     onClick={() => filterCategory('All')} 

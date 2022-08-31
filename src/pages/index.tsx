@@ -8,8 +8,7 @@ export default function Home() {
   return (
     <div>
       <Header/>
-      <h1 className="text-3xl font-bold underline"> Content </h1>
-      <main className="container grid grid-cols-4 gap-6 pb-16 items-start mx-auto">
+      <main className="container grid grid-cols-4 py-10 gap-6 pb-16 items-start mx-auto">
         <div className="col-span-1">
           <Sidebar/>
         </div>
