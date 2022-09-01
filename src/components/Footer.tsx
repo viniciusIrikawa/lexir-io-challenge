@@ -42,7 +42,7 @@ const Footer = () => {
         <div className='mx-5 text-[#fff]'> © 2022 Lexir Inc. </div>
         <div>
           <span className='mx-5 text-[#fff]'>Privacy</span>
-          <span className='mx-5 text-[#fff]'>Terms of service</span>
+          <span className='mx-5 text-[#fff] '>Terms of service</span>
         </div>
       </div>
 
