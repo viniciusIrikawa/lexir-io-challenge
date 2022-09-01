@@ -9,13 +9,12 @@ export default function Home() {
   return (
     <div>
       <Header/>
-      <main className="container grid grid-cols-4 py-10 gap-6 pb-16 items-start mx-auto">
+      <main className="container md:grid md:grid-cols-4 py-10 px-5 gap-6 pb-16 items-start mx-auto">
         <div className="col-span-1">
           <Sidebar/>
         </div>
         <div className="col-span-3">
           <GridProducts/>
-
         </div>
       </main>
       <Footer/>

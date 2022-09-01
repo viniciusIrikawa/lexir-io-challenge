@@ -5,7 +5,7 @@ import Image from 'next/image'
 const GridProducts = () => {
   return (
     <div>
-      <ul className='container grid grid-cols-4'>
+      <ul className='container my-10 md:grid md:grid-cols-4 md:my-0'>
         {products.map((item:Products) => (
           <li key={item.id} className='mx-5 mb-10 flex flex-col justify-center items-center'> 
             <div className='imgWrapper bg-[#F2F2F2] w-full py-5 flex justify-center items-center'> 

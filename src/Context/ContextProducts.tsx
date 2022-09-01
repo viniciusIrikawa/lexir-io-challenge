@@ -13,8 +13,10 @@ type ProductsContextProps = {
 export const ProductContext = React.createContext({} as ProductsContextProps);
 
 export function ProductsProvider({ children }:Children){
+
     const [listProducts, setListProducts] = useState(products);
-     console.log(listProducts)
+    
+    console.log(listProducts)
 
     return(
         <ProductContext.Provider value={{ listProducts }}>
