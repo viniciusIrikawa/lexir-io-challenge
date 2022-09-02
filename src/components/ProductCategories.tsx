@@ -16,8 +16,7 @@ import {ProductContext} from '../Context/ContextProducts'
 // console.log(categories)
 
 const ProductCategories = () => {
-  const {listProducts} = useContext(ProductContext);
-  console.log(listProducts)
+  const teste = useContext(ProductContext);
 
   const filterCategory = (category:string) => {
     console.log(category)
