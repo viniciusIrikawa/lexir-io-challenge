@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import {ProductContext} from '../Context/ContextProducts'
 
 // interface Category {
@@ -15,11 +15,15 @@ import {ProductContext} from '../Context/ContextProducts'
 // console.log(categories)
 
 const ProductCategories = () => {
+  const {listProducts, setListProducts} = useContext(ProductContext);
 
   const filterCategory = (category:string) => {
-    console.log(category)
-  }
 
+    const filteredCategory = listProducts.filter(item => category === item.category)
+    console.log(filteredCategory)
+
+    setListProducts(filteredCategory)
+  }
 
   return (
     <div className='my-10'>

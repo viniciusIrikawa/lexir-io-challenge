@@ -13,7 +13,7 @@ interface ProductsContextProps{
 
 const initialValue:ProductsContextProps = {
     listProducts: products,
-    setListProducts: () => {}
+    setListProducts: () => []
 };
 
 export const ProductContext = React.createContext(initialValue);

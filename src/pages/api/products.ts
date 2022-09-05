@@ -128,5 +128,5 @@ export const products: Product[] = [
         category: "Vodka",
         quantity: 0,
         image: require("../../assets/images/packshot-mr-gaston-brandy.png")
-    },
+    }
 ]
