@@ -4,11 +4,11 @@ const Footer = () => {
   return (
     <footer className='bg-zinc-800 py-5 w-full py-7 px-12'>
       <div className='md:flex md:justify-around'>
-        <div className='text-[#fff] text-4xl font-serif md:text-left text-center'> Lexir </div>
+        <div className='text-[#fff] text-4xl font-serif md:text-left text-center'> Nice Beer </div>
 
         <ul className='text-[#fff] md:text-left text-center md:my-0 my-8'>
           <span className='uppercase text-[#8F8F8F] '> Community</span>
-          <li className='my-2'>Lexir for Brands</li>
+          <li className='my-2'>Nice Beer for Brands</li>
           <li className='my-2'>Business Buyers </li>
           <li className='my-2'>Sales Affiliates </li>
         </ul>
@@ -39,7 +39,7 @@ const Footer = () => {
       <div className='h-px w-full bg-stone-600 text-[#8F8F8F] my-5'>  </div>
   
       <div className='w-full flex justify-between'>
-        <div className='mx-5 text-[#fff]'> © 2022 Lexir Inc. </div>
+        <div className='mx-5 text-[#fff]'> © 2022 Nice Beer Inc. </div>
         <div>
           <span className='mx-5 text-[#fff]'>Privacy</span>
           <span className='mx-5 text-[#fff] '>Terms of service</span>

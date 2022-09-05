@@ -9,7 +9,7 @@ const Header = () => {
     <header className='w-full border-b-4 py-7 px-12 md:flex md:justify-between items-center'>
         <div className='flex justify-center md:mb-0 mb-5'>
             <Link href={"/"}> 
-                <a className='text-5xl font-serif'> Lexir </a>
+                <a className='text-5xl font-serif'> Nice Beer </a>
             </Link>
         </div>
         <div>

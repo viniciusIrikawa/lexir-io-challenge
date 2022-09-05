@@ -12,7 +12,7 @@ const ProductCategories = () => {
     console.log(filteredCategory)
 
     setListProducts(filteredCategory)
-  }
+  }    
 
   return (
     <div className='my-10'>
@@ -24,18 +24,18 @@ const ProductCategories = () => {
       </div>
 
       <div>
-        {categories.map((item, index) => item === 'All' ? 
+        {categories.map((category, index) => category === 'All' ? 
         (
           <button type="button"
                   key={index} 
                   onClick={() => setListProducts(products)} 
-                  className="bg-emerald-400 py-1 px-5 m-1 rounded bg-gray-100"> All </button>
+                  className="bg-emerald-400 py-1 px-5 m-1 rounded bg-gray-100"> All ({listProducts.length}) </button>
         ) : (
           <button type="button"
                   key={index} 
-                  onClick={() => filterCategory(`${item}`)} 
-                  className="bg-emerald-400 py-1 px-5 m-1 rounded bg-gray-100" > {item} </button>
-        ))}
+                  onClick={() => filterCategory(`${category}`)} 
+                  className="bg-emerald-400 py-1 px-5 m-1 rounded bg-gray-100" > {category} </button>
+        ))} 
 
       </div>
     </div>

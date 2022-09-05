@@ -12,9 +12,9 @@ const BaldoriaVermouth = () => {
                 className=''/>
       </div>
       <strong>
-        <h1 className='text-3xl text-center mb-5 font-serif '> Baldoria Vermouth </h1>
+        <h1 className='text-3xl text-center mb-5 font-serif '> Lorem ipsum dolor </h1>
       </strong>
-      <p> Badoria rosso is a red vermouth that balances fresh, herby bitter notes against. Kiss My Rhubarb takes its origins from an old handwritten recipe from co-creators Niels’ and Wouters’ rebellious grandparents.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <div className='btnWrapper flex justify-center'>
         <button className='text-[#1C8C64] my-5 font-bold'> Read More </button>
       </div>
