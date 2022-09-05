@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { products } from 'src/pages/api/products';
 import {ProductContext} from '../Context/ContextProducts'
 
 // interface Category {
@@ -36,7 +37,7 @@ const ProductCategories = () => {
 
       <div> 
         <button type="button" 
-                onClick={() => filterCategory('All')} 
+                onClick={() => setListProducts(products)} 
                 className="bg-emerald-400 py-1 px-5 m-1 rounded bg-gray-100"> All </button>
         <button type="button" 
                 onClick={() => filterCategory('Gin')} 
