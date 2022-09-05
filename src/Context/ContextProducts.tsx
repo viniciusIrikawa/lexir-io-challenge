@@ -6,21 +6,21 @@ interface Children{
     children: React.ReactNode;
 }
 
-type ProductsContextProps = {
-    listProducts: Product[];
+interface ProductsContextProps{
+    listProducts: Product[],
     setListProducts: (newState: Product[]) => void;
 }
 
-const initialValue = {
+const initialValue:ProductsContextProps = {
     listProducts: products,
-    setlistProducts: () => {}
+    setListProducts: () => {}
 };
 
-export const ProductContext = React.createContext(products);
+export const ProductContext = React.createContext(initialValue);
 
 export const ProductsProvider = ({ children }:Children) => {
 
-    const [listProducts, setListProducts] = useState<ProductsContextProps>(initialValue);
+    const [listProducts, setListProducts] = useState(products);
 
     return(
         <ProductContext.Provider value={{ listProducts, setListProducts }}>

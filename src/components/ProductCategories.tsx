@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react'
-import {products} from '../pages/api/products'
 import {ProductContext} from '../Context/ContextProducts'
 
 // interface Category {
@@ -16,7 +15,6 @@ import {ProductContext} from '../Context/ContextProducts'
 // console.log(categories)
 
 const ProductCategories = () => {
-  const teste = useContext(ProductContext);
 
   const filterCategory = (category:string) => {
     console.log(category)
