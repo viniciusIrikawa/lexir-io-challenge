@@ -1,18 +1,7 @@
-import React, { useContext } from 'react'
-import { products } from 'src/pages/api/products';
-import {ProductContext} from '../Context/ContextProducts'
-import {categories} from '../pages/api//categories'
+import React from 'react'
+import CategoryButtons from './CategoryButton';
 
 const ProductCategories = () => {
-  const {listProducts, setListProducts} = useContext(ProductContext);
-
-  const filterCategory = (category:string) => {
-
-    const filteredCategory = listProducts.filter(item => category === item.category)
-    console.log(filteredCategory)
-
-    setListProducts(filteredCategory)
-  }    
 
   return (
     <div className='my-10'>
@@ -24,19 +13,7 @@ const ProductCategories = () => {
       </div>
 
       <div>
-        {categories.map((category, index) => category === 'All' ? 
-        (
-          <button type="button"
-                  key={index} 
-                  onClick={() => setListProducts(products)} 
-                  className="bg-emerald-400 py-1 px-5 m-1 rounded bg-gray-100"> All ({listProducts.length}) </button>
-        ) : (
-          <button type="button"
-                  key={index} 
-                  onClick={() => filterCategory(`${category}`)} 
-                  className="bg-emerald-400 py-1 px-5 m-1 rounded bg-gray-100" > {category} </button>
-        ))} 
-
+        <CategoryButtons/>
       </div>
     </div>
   )
