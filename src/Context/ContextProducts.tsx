@@ -10,7 +10,7 @@ interface ProductsContextProps{
     listProducts: Product[];
     setListProducts: (newState: Product[]) => void;
     cartItems: Product[];
-    setCartItems: (newItem: any) => void;
+    setCartItems: (newItem: Product[]) => void;
 }
 
 const initialValue:ProductsContextProps = {
@@ -25,7 +25,7 @@ export const ProductContext = React.createContext(initialValue);
 export const ProductsProvider = ({ children }:Children) => {
 
     const [listProducts, setListProducts] = useState(products);
-    const [cartItems, setCartItems] = useState([]);
+    const [cartItems, setCartItems] = useState<Product[]>([]);
 
     return(
         <ProductContext.Provider value={{ listProducts, setListProducts, cartItems, setCartItems }}>
