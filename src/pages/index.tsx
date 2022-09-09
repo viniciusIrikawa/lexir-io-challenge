@@ -3,6 +3,7 @@ import Header from "@components/Header";
 import GridProducts from "@components/GridProducts";
 import Sidebar from "@components/Sidebar";
 import Footer from "@components/Footer";
+import Cart from "@components/Cart";
 
 export default function Home() {
 

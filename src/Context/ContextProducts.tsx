@@ -7,13 +7,17 @@ interface Children{
 }
 
 interface ProductsContextProps{
-    listProducts: Product[],
+    listProducts: Product[];
     setListProducts: (newState: Product[]) => void;
+    cartItems: Product[];
+    setCartItems: (newItem: any) => void;
 }
 
 const initialValue:ProductsContextProps = {
     listProducts: products,
-    setListProducts: () => {}
+    setListProducts: () => {},
+    cartItems: [],
+    setCartItems: () => {}
 };
 
 export const ProductContext = React.createContext(initialValue);
@@ -21,9 +25,10 @@ export const ProductContext = React.createContext(initialValue);
 export const ProductsProvider = ({ children }:Children) => {
 
     const [listProducts, setListProducts] = useState(products);
+    const [cartItems, setCartItems] = useState([]);
 
     return(
-        <ProductContext.Provider value={{ listProducts, setListProducts }}>
+        <ProductContext.Provider value={{ listProducts, setListProducts, cartItems, setCartItems }}>
             {children}
         </ProductContext.Provider>
     )
