@@ -29,7 +29,7 @@ const CategoryButtons = () => {
                 <button type="button"
                         key={index} 
                         onClick={() => { setListProducts(filterCategory(category)), setActive(category) }} 
-                        className={ `py-1 px-2 m-1 rounded bg-gray-100 ${active === category ? 'bg-[#d7d7d7]' : 'bg-gray-100' }`}> {category} ({ filterCategory(category).length }) 
+                        className={ `py-1 px-2 m-1 rounded ${active === category ? 'bg-[#d7d7d7]' : 'bg-gray-100' }`}> {category} ({ filterCategory(category).length }) 
    
                 </button>
             ))} 
