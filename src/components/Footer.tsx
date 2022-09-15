@@ -28,7 +28,7 @@ const Footer = () => {
         </ul>
 
         <ul className='text-[#fff] md:text-left text-center md:my-0 my-8'>
-          <span className='uppercase text-[#8F8F8F]'> Lexir Shop</span>
+          <span className='uppercase text-[#8F8F8F]'> Nice Beer Shop</span>
           <li className='my-2'>Brands</li>
           <li className='my-2'>Spirits </li>
           <li className='my-2'>Wine</li>
