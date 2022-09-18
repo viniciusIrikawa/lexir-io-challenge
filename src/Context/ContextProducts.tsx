@@ -6,18 +6,27 @@ interface Children{
     children: React.ReactNode;
 }
 
+type ToastMessage = {
+  productName: string,
+  active: boolean
+}
+
 interface ProductsContextProps{
     listProducts: Product[];
     setListProducts: (newState: Product[]) => void;
     cartItems: Product[];
     setCartItems: (newItem: Product[]) => void;
+    isActive: ToastMessage,
+    setIsActive: (newToast: ToastMessage) => void;
 }
 
 const initialValue:ProductsContextProps = {
     listProducts: products,
     setListProducts: () => {},
     cartItems: [],
-    setCartItems: () => {}
+    setCartItems: () => {},
+    isActive: {productName: '', active: false}, 
+    setIsActive: () => {}
 };
 
 export const ProductContext = React.createContext(initialValue);
@@ -26,9 +35,10 @@ export const ProductsProvider = ({ children }:Children) => {
 
     const [listProducts, setListProducts] = useState(products);
     const [cartItems, setCartItems] = useState<Product[]>([]);
+    const [isActive, setIsActive] = useState<ToastMessage>({productName: '', active: false});
 
     return(
-        <ProductContext.Provider value={{ listProducts, setListProducts, cartItems, setCartItems }}>
+        <ProductContext.Provider value={{ listProducts, setListProducts, cartItems, setCartItems, isActive, setIsActive }}>
             {children}
         </ProductContext.Provider>
     )

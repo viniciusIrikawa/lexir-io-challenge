@@ -1,10 +1,12 @@
 import {ProductContext} from '../Context/ContextProducts'
 import Image from 'next/image'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import {Product} from '../types/typeProducts'
+import ToastNotification from './ToastNotification'
 
 const GridProducts = () => {
-  const {listProducts, cartItems, setCartItems} = useContext(ProductContext);
+
+  const {listProducts, cartItems, setCartItems, setIsActive} = useContext(ProductContext);
 
   const addProduct = (product:Product) => {
     const itemExist = cartItems.find((element) => element.id === product.id);
@@ -14,8 +16,8 @@ const GridProducts = () => {
       {...itemExist, quantity: itemExist.quantity = 1}: item ))   
     }
     else{
-        setCartItems([...cartItems, product])     
-    }
+      setCartItems([...cartItems, product])     
+    }    
   }
 
   return (
@@ -32,11 +34,17 @@ const GridProducts = () => {
                 <span className='price text-[#6B6B6B]'> €{item.price} </span>
               </div>
                 <span className='price text-[#afaeae]'> {item.category} </span>
-              <button className='py-1 px-10 mt-2 w-full bg-[#4be64bc9] rounded-md' onClick={ () => addProduct(item)}> Add to cart </button>
+              <button className='py-1 px-10 mt-2 w-full bg-[#4be64bc9] rounded-md' 
+                      onClick={() => {
+                        addProduct(item)
+                        setIsActive({productName: item.name, active: true})}}> 
+                        Add to cart 
+              </button>
             </div>
           </li>
         ))}
       </ul>
+      <ToastNotification/>
     </div>
   )
 }
