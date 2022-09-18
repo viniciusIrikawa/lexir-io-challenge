@@ -34,7 +34,7 @@ const GridProducts = () => {
                 <span className='price text-[#6B6B6B]'> €{item.price} </span>
               </div>
                 <span className='price text-[#afaeae]'> {item.category} </span>
-              <button className='py-1 px-10 mt-2 w-full bg-[#4be64bc9] rounded-md' 
+              <button className='py-1 px-10 mt-2 w-full bg-[#7dec7d] rounded-md' 
                       onClick={() => {
                         addProduct(item)
                         setIsActive({productName: item.name, active: true})}}> 

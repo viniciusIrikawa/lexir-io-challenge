@@ -5,7 +5,17 @@ module.exports = {
     "./node_modules/flowbite-react/**/*.js"
   ],
   theme: {
-    extend: {},
+    extend: {
+      animation:{
+        slideUP: 'slideUP 0.6s ease'
+      },
+      keyframes: {
+        slideUP: {
+          '0%': { transform: 'translateY(0)'},
+          '100%': { transform: 'translateY(5)'},
+        }
+      }
+    },
   },
   variants: {
     extend: {
