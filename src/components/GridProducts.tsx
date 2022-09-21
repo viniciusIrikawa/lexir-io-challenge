@@ -1,6 +1,6 @@
 import {ProductContext} from '../Context/ContextProducts'
 import Image from 'next/image'
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import {Product} from '../types/typeProducts'
 import ToastNotification from './ToastNotification'
 
@@ -14,9 +14,11 @@ const GridProducts = () => {
     if(itemExist){
       setCartItems(cartItems.map((item) => item.id === product.id ? 
       {...itemExist, quantity: itemExist.quantity = 1}: item ))   
+
     }
     else{
       setCartItems([...cartItems, product])     
+      setIsActive({productName: product.name, active: true})
     }    
   }
 
@@ -36,9 +38,7 @@ const GridProducts = () => {
                 <span className='price text-[#afaeae]'> {item.category} </span>
               <button className='py-1 px-10 mt-2 w-full bg-[#7dec7d] rounded-md' 
                       onClick={() => {
-                        addProduct(item)
-                        setIsActive({productName: item.name, active: true})}}> 
-                        Add to cart 
+                        addProduct(item)}}> Add to cart 
               </button>
             </div>
           </li>
