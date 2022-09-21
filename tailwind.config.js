@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       animation:{
-        slideUP: 'slideUP 0.6s ease'
+        slideUP: 'slideUP 0.3s ease'
       },
       keyframes: {
         slideUP: {
