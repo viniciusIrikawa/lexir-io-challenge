@@ -8,7 +8,7 @@ const Cart = () => {
 
     return (
         <div>
-            <Link href={''}>
+            <Link href={'/cart'}>
                 <a className='my-1 flex items-center'>
                     <div className='p-2 relative'>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">

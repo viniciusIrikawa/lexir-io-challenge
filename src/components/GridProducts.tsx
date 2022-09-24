@@ -14,7 +14,7 @@ const GridProducts = () => {
     if(itemExist){
       setCartItems(cartItems.map((item) => item.id === product.id ? 
       {...itemExist, quantity: itemExist.quantity = 1}: item ))   
-      alert('This product is already in the cart!')
+      alert ('This product is already in the cart!')
     }
     else{
       setCartItems([...cartItems, product])     

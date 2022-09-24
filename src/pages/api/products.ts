@@ -6,7 +6,7 @@ export const products: Product[] = [
         name: "Mr. Gaston 1",
         price: 32,
         category: "Gin",
-        quantity: 0,
+        quantity: 1,
         image: require("../../assets/images/packshot-audemus-umami-gin.png")
     },
     {
@@ -14,7 +14,7 @@ export const products: Product[] = [
         name: "Mr. Gaston 2",
         price: 32,
         category: "Gin",
-        quantity: 0,
+        quantity: 1,
         image: require("../../assets/images/packshot-silent-pool-silent-pool-gin.png")
     },
     {
@@ -22,7 +22,7 @@ export const products: Product[] = [
         name: "Mr. Gaston 3",
         price: 32,
         category: "Gin",
-        quantity: 0,
+        quantity: 1,
         image: require("../../assets/images/stockholms-branneri-pink-gin-packshot.png")
     },
     {
@@ -30,7 +30,7 @@ export const products: Product[] = [
         name: "Mr. Gaston 4",
         price: 32,
         category: "Vodka",
-        quantity: 0,
+        quantity: 1,
         image: require("../../assets/images/packshot-mr-gaston-brandy.png")
     },
     {
@@ -38,7 +38,7 @@ export const products: Product[] = [
         name: "Mr. Gaston 5",
         price: 32,
         category: "Gin",
-        quantity: 0,
+        quantity: 1,
         image: require("../../assets/images/packshot-audemus-umami-gin.png")
     },
     {
@@ -46,7 +46,7 @@ export const products: Product[] = [
         name: "Mr. Gaston 6",
         price: 32,
         category: "Gin",
-        quantity: 0,
+        quantity: 1,
         image: require("../../assets/images/packshot-silent-pool-silent-pool-gin.png")
     },
     {
@@ -54,7 +54,7 @@ export const products: Product[] = [
         name: "Mr. Gaston 7",
         price: 32,
         category: "Gin",
-        quantity: 0,
+        quantity: 1,
         image: require("../../assets/images/stockholms-branneri-pink-gin-packshot.png")
     },
     {
@@ -62,7 +62,7 @@ export const products: Product[] = [
         name: "Mr. Gaston 8",
         price: 32,
         category: "Vodka",
-        quantity: 0,
+        quantity: 1,
         image: require("../../assets/images/packshot-mr-gaston-brandy.png")
     },
     {
@@ -70,7 +70,7 @@ export const products: Product[] = [
         name: "Mr. Gaston 9",
         price: 32,
         category: "Gin",
-        quantity: 0,
+        quantity: 1,
         image: require("../../assets/images/packshot-audemus-umami-gin.png")
     },
     {
@@ -78,7 +78,7 @@ export const products: Product[] = [
         name: "Mr. Gaston 10",
         price: 32,
         category: "Gin",
-        quantity: 0,
+        quantity: 1,
         image: require("../../assets/images/packshot-silent-pool-silent-pool-gin.png")
     },
     {
@@ -86,7 +86,7 @@ export const products: Product[] = [
         name: "Mr. Gaston 11",
         price: 32,
         category: "Gin",
-        quantity: 0,
+        quantity: 1,
         image: require("../../assets/images/stockholms-branneri-pink-gin-packshot.png")
     },
     {
@@ -94,7 +94,7 @@ export const products: Product[] = [
         name: "Mr. Gaston 12",
         price: 32,
         category: "Vodka",
-        quantity: 0,
+        quantity: 1,
         image: require("../../assets/images/packshot-mr-gaston-brandy.png")
     },
     {
@@ -102,7 +102,7 @@ export const products: Product[] = [
         name: "Mr. Gaston 13",
         price: 32,
         category: "Gin",
-        quantity: 0,
+        quantity: 1,
         image: require("../../assets/images/packshot-audemus-umami-gin.png")
     },
     {
@@ -110,7 +110,7 @@ export const products: Product[] = [
         name: "Mr. Gaston 14",
         price: 32,
         category: "Gin",
-        quantity: 0,
+        quantity: 1,
         image: require("../../assets/images/packshot-silent-pool-silent-pool-gin.png")
     },
     {
@@ -118,7 +118,7 @@ export const products: Product[] = [
         name: "Mr. Gaston 15",
         price: 32,
         category: "Gin",
-        quantity: 0,
+        quantity: 1,
         image: require("../../assets/images/stockholms-branneri-pink-gin-packshot.png")
     },
     {
@@ -126,7 +126,7 @@ export const products: Product[] = [
         name: "Mr. Gaston 16",
         price: 32,
         category: "Vodka",
-        quantity: 0,
+        quantity: 1,
         image: require("../../assets/images/packshot-mr-gaston-brandy.png")
     }
 ]
