@@ -1,4 +1,5 @@
 import Header from "@components/Header";
+import Footer from "@components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { useContext } from "react";
@@ -6,17 +7,40 @@ import { ProductContext } from '../Context/ContextProducts'
 
 export default function Cart() {
 
-  const { cartItems } = useContext(ProductContext)
+  const { cartItems, setCartItems } = useContext(ProductContext)
+
+  const decrement = (idItem: number) => {
+    const findItem:any = cartItems.find( item => item.id === idItem );
+
+    if(findItem.quantity > 0){ 
+      setCartItems(cartItems.map( item => item.id === idItem ? 
+        {...findItem, quantity: findItem.quantity - 1} : item))
+    }
+  }
+
+  const increment = (idItem: number) => {
+    const findItem:any = cartItems.find( item => item.id === idItem );
+
+    if(findItem.quantity < 10){
+      setCartItems(cartItems.map( item => item.id === idItem ? 
+        {...findItem, quantity: findItem.quantity + 1} : item))
+    }
+  }
+
+  const remove = (idItem: number) => {
+    const items:any = cartItems.filter( item => item.id !== idItem );
+    setCartItems(items);
+  }
 
   return (
     <div>
       <Header/>
 
-      <main className="w-full grid-cols-2 py-5 px-3">
+      <main className="w-full h-[100vh] grid-cols-2 py-5 px-3">
 
         <div className="flex items-center mb-7">
-          <Link href={'/'}>
-            <a> 
+          <Link href={'/'} className="md:hidden">
+            <a className="md:hidden"> 
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
               </svg>
@@ -24,11 +48,10 @@ export default function Cart() {
             </a>
 
           </Link>
-          <h1 className="w-full text-center py-5 text-2xl"> Cart details </h1>
+          <h1 className="w-full text-center py-5 text-xl"> Cart details </h1>
         </div>
 
         <div className="md:grid md:grid-cols-4">
-          
           {cartItems.length === 0 ? 
             ( <span className="bg-red-200 p-5"> No items in your cart </span> ) : 
             (
@@ -51,11 +74,21 @@ export default function Cart() {
                       </td>
 
                       <td className="py-3 text-center text-[#059e05] font-bold-400"> €{item.price} </td>
+
                       <td className="py-3 text-center"> 
-                        <button className="mx-2 border-[1px] bg-[#f5f5f5] w-[20px]"> - </button>
-                          <span> {item.quantity} </span>
-                        <button className="mx-2 border-[1px] bg-[#f5f5f5] w-[20px]"> + </button>
+                        <div className="">
+                          <button className="mx-2 border-[1px] bg-[#f5f5f5] w-[20px]" onClick={ () => decrement(item.id) }> - </button>
+                            {item.quantity === 0 ? 
+                              ( <button onClick={ () => remove(item.id)} className="text-[#ff0000] border-[2px] border-[#ff0000] rounded-[5px] px-[5px]"> 
+                                  remove
+                                </button>) : 
+                              ( <span> {item.quantity} </span> )
+                            }
+                          <button className="mx-2 border-[1px] bg-[#f5f5f5] w-[20px]" onClick={() => increment(item.id) }> + </button>
+
+                        </div>
                       </td>
+
                       <td className="py-3 text-center"> €{item.price} </td>
                     </tr>
                   ))}
@@ -76,10 +109,11 @@ export default function Cart() {
 
             <button className="bg-blue-400 h-[40px] w-[90%] px-3 font-bold rounded-lg md:absolute md:bottom-[5%]"> Checkout </button>      
           </aside>
-
-
         </div>
+
       </main>
+
+      <Footer/>
     </div>
   );
 }
