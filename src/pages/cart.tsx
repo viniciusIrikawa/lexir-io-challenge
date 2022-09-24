@@ -36,7 +36,7 @@ export default function Cart() {
     <div>
       <Header/>
 
-      <main className="w-full h-[100vh] grid-cols-2 py-5 px-3">
+      <main className="w-full grid-cols-2 py-5 px-3">
 
         <div className="flex items-center mb-7">
           <Link href={'/'} className="md:hidden">
