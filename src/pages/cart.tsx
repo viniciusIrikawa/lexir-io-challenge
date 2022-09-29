@@ -36,11 +36,11 @@ export default function Cart() {
     <div>
       <Header/>
 
-      <main className="w-full grid-cols-2 py-5 px-3">
+      <main className="w-full grid-cols-2 pt-[50px] pb-[300px] px-3">
 
-        <div className="flex items-center mb-7">
-          <Link href={'/'} className="md:hidden">
-            <a className="md:hidden"> 
+        <div className={`${cartItems.length === 0 && "hidden"} md:px-[1.5%] flex items-center justify-around mb-10`}>
+          <Link href={'/'}>
+            <a className="md:bg-[#f5f5f5] md:hover:bg-slate-200 transition duration-300 p-2 rounded-full"> 
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
               </svg>
@@ -48,21 +48,29 @@ export default function Cart() {
             </a>
 
           </Link>
-          <h1 className="w-full text-center py-5 text-xl"> Cart details </h1>
+          <h1 className="w-full text-center text-xl"> Cart details </h1>
         </div>
 
-        <div className="md:grid md:grid-cols-4">
+        <div className={`md:grid md:grid-cols-4 ${cartItems.length === 0 && "md:grid-cols-1"}`}>
           {cartItems.length === 0 ? 
-            ( <span className="bg-red-200 p-5"> No items in your cart </span> ) : 
+            ( <div className="flex flex-col">
+                <span className="pb-2 text-center text-[20px]"> No items in your cart. </span> 
+                <Link href={'/'}>
+                  <a className="underline text-center text-[#ff0505]"> Go back </a>
+                </Link>
+              </div>
+            ) : 
             (
-              <table className=" md:col-span-3 md:mx-5 divide-y-[0.5px] w-full md:w-auto divide-[#dddddd]">
+              <table className=" md:col-span-3 md:mx-5 divide-y-[0.5px] w-full h-[20vh] md:w-auto divide-[#dddddd]">
+                <thead>
                   <tr className="bg-[#dddddd] h-0">
                     <th className="w-0 py-2"> Product </th>
                     <th className="w-0 py-2"> Price </th>
                     <th className="w-0 py-2"> Quantity </th>
                     <th className="w-0 py-2"> Total </th>
                   </tr>
-
+                </thead>
+                <tbody>
                   {cartItems.map(item => (
                     <tr key={item.id} className="">
                       <td className="py-3 text-center flex items-center justify-center">
@@ -92,11 +100,11 @@ export default function Cart() {
                       <td className="py-3 text-center"> €{item.price} </td>
                     </tr>
                   ))}
-
+                </tbody>
               </table>
             )}
 
-          <aside className="md:col-span-1 md:border-2 md:border-[#e2e2e2] md:h-[300px] py-3 mt-8 md:mt-0 flex flex-col items-center relative">
+          <aside className={`${cartItems.length === 0 && "hidden"} md:col-span-1 md:border-2 md:border-[#e2e2e2] md:h-[300px] py-3 mt-8 md:mt-0 flex flex-col items-center relative`}>
             <div>
               <span> Subtotal:  </span>
               <span>  € subtotal </span>
