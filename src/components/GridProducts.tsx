@@ -10,13 +10,14 @@ const GridProducts = () => {
 
   const addProduct = (product:Product) => {
     const itemExist = cartItems.find((element) => element.id === product.id);
-
+    
     if(itemExist){
       setCartItems(cartItems.map((item) => item.id === product.id ? 
       {...itemExist, quantity: itemExist.quantity = 1}: item ))   
       alert ('This product is already in the cart!')
     }
     else{
+      setIsActive({productName: product.name, active: false})
       setCartItems([...cartItems, product])     
       setIsActive({productName: product.name, active: true})
     }    
