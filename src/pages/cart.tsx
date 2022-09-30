@@ -51,7 +51,10 @@ export default function Cart() {
 
         <div className={`md:grid md:grid-cols-4 ${cartItems.length === 0 && "md:grid-cols-1"}`}>
           {cartItems.length === 0 ? 
-            ( <div className="flex flex-col">
+            ( <div className="flex flex-col h-[40vh]">
+                <div className="w-full flex justify-center mb-5">
+                  <Image src={require("../assets/images/empty_cart.jpg")} width={200} height={200} alt=''></Image>
+                </div>
                 <span className="pb-2 text-center text-[20px]"> No items in your cart. </span> 
                 <Link href={'/'}>
                   <a className="underline text-center text-[#ff0505]"> Go back </a>
@@ -98,7 +101,7 @@ export default function Cart() {
                         </div>
                       </td>
 
-                      <td className="py-3 text-center"> €{item.price} </td>
+                      <td className="py-3 text-center"> €{item.price * item.quantity} </td>
                     </tr>
                   ))}
                 </tbody>
