@@ -117,7 +117,7 @@ export default function Cart() {
               </table>
             )}
 
-          <aside className={`${cartItems.length === 0 && "hidden"} md:col-span-1 md:h-[250px] py-3 mt-8 md:mt-0 flex flex-col items-center relative`}>
+          <aside className={`${cartItems.length === 0 && "hidden"} md:col-span-1 md:h-[250px] py-3 mt-8 md:mt-0 flex flex-col items-center relative divide-y`}>
             <div className="w-full flex justify-between px-[3%] text-zinc-500 my-2">
               <span> Subtotal:  </span>
               <span>  € {subtotalCartPrice} </span>
@@ -133,7 +133,7 @@ export default function Cart() {
               <span>  € {subtotalCartPrice} </span>
             </div>
 
-            <button className="bg-[#505050] h-[40px] w-[90%] text-[#dedede] px-3 mt-3 font-bold rounded-lg md:absolute md:bottom-[5%]"
+            <button className="bg-[#505050] h-[40px] w-[90%] text-[#e4e4e4] px-3 mt-3 font-bold rounded-lg md:absolute md:bottom-[5%]"
                     title="Checkout"> Checkout 
             </button>      
           </aside>

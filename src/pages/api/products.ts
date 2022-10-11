@@ -3,7 +3,7 @@ import {Product} from '../../types/typeProducts'
 export const products: Product[] = [
     {
         id: 1,
-        name: "Mr. Gaston 1",
+        name: "Nice Gin 1",
         price: 32,
         category: "Gin",
         quantity: 1,
@@ -11,7 +11,7 @@ export const products: Product[] = [
     },
     {
         id: 2,
-        name: "Mr. Gaston 2",
+        name: "Nice Flavor 1",
         price: 32,
         category: "Gin",
         quantity: 1,
@@ -19,7 +19,7 @@ export const products: Product[] = [
     },
     {
         id: 3,
-        name: "Mr. Gaston 3",
+        name: "Nice Flavor 2",
         price: 32,
         category: "Gin",
         quantity: 1,
@@ -27,7 +27,7 @@ export const products: Product[] = [
     },
     {
         id: 4,
-        name: "Mr. Gaston 4",
+        name: "Nice Vodka 1",
         price: 32,
         category: "Vodka",
         quantity: 1,
@@ -35,7 +35,7 @@ export const products: Product[] = [
     },
     {
         id: 5,
-        name: "Mr. Gaston 5",
+        name: "Nice Gin 2",
         price: 32,
         category: "Gin",
         quantity: 1,
@@ -43,7 +43,7 @@ export const products: Product[] = [
     },
     {
         id: 6,
-        name: "Mr. Gaston 6",
+        name: "Nice Flavor 3",
         price: 32,
         category: "Gin",
         quantity: 1,
@@ -51,7 +51,7 @@ export const products: Product[] = [
     },
     {
         id: 7,
-        name: "Mr. Gaston 7",
+        name: "Nice Flavor 4",
         price: 32,
         category: "Gin",
         quantity: 1,
@@ -59,7 +59,7 @@ export const products: Product[] = [
     },
     {
         id: 8,
-        name: "Mr. Gaston 8",
+        name: "Nice Vodka 2",
         price: 32,
         category: "Vodka",
         quantity: 1,
@@ -67,7 +67,7 @@ export const products: Product[] = [
     },
     {
         id: 9,
-        name: "Mr. Gaston 9",
+        name: "Nice Gin 3",
         price: 32,
         category: "Gin",
         quantity: 1,
@@ -75,7 +75,7 @@ export const products: Product[] = [
     },
     {
         id: 10,
-        name: "Mr. Gaston 10",
+        name: "Nice Flavor 5",
         price: 32,
         category: "Gin",
         quantity: 1,
@@ -83,7 +83,7 @@ export const products: Product[] = [
     },
     {
         id: 11,
-        name: "Mr. Gaston 11",
+        name: "Nice Flavor 6",
         price: 32,
         category: "Gin",
         quantity: 1,
@@ -91,7 +91,7 @@ export const products: Product[] = [
     },
     {
         id: 12,
-        name: "Mr. Gaston 12",
+        name: "Nice Vodka 3",
         price: 32,
         category: "Vodka",
         quantity: 1,
@@ -99,7 +99,7 @@ export const products: Product[] = [
     },
     {
         id: 13,
-        name: "Mr. Gaston 13",
+        name: "Nice Gin 4",
         price: 32,
         category: "Gin",
         quantity: 1,
@@ -107,7 +107,7 @@ export const products: Product[] = [
     },
     {
         id: 14,
-        name: "Mr. Gaston 14",
+        name: "Nice Flavor 7",
         price: 32,
         category: "Gin",
         quantity: 1,
@@ -115,7 +115,7 @@ export const products: Product[] = [
     },
     {
         id: 15,
-        name: "Mr. Gaston 15",
+        name: "Nice Flavor 8",
         price: 32,
         category: "Gin",
         quantity: 1,
@@ -123,7 +123,7 @@ export const products: Product[] = [
     },
     {
         id: 16,
-        name: "Mr. Gaston 16",
+        name: "Nice Vodka 4",
         price: 32,
         category: "Vodka",
         quantity: 1,

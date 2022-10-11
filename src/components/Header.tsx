@@ -16,7 +16,7 @@ const Header = () => {
             <div className='fixed top-0 -left-full h-[100vh] w-8/12 bg-[#efefef] border z-10 opacity-0 group-focus:left-0 group-focus:opacity-100 transition-all duration-500'>
                 <div className='mt-10 mb-5 pb-3 border-b-2 border-[#b2b2b2]'>
                     <Link href={"/"}> 
-                        <a className='text-2xl md:text-5xl font-serif'> Nice Beer </a>
+                        <a className='text-2xl md:text-5xl font-serif'> Nice Drink </a>
                     </Link>
                 </div>
                 <ul className='flex flex-col px-3 uppercase'>
@@ -47,7 +47,7 @@ const Header = () => {
 
         <div className=''>
             <Link href={"/"}> 
-                <a className='text-2xl md:text-5xl font-serif ml-10 md:ml-0'> Nice Beer </a>
+                <a className='text-2xl md:text-5xl font-serif ml-10 md:ml-0'> Nice Drink </a>
             </Link>
         </div>
             <ul className='hidden flex justify-around uppercase md:flex md:flex-row flex-col items-center'>
