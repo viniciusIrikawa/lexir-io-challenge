@@ -4,7 +4,7 @@ describe('Ecommerce', () => {
     })
 
     it('Filter by Vodka' , () => {
-        cy.get(':nth-child(2) > div > :nth-child(3)').click()
+        cy.get(':nth-child(3) > :nth-child(2) > div > :nth-child(3)').click()
     })
 
     it('Add Vodka to the cart', () => {
@@ -30,5 +30,9 @@ describe('Ecommerce', () => {
     it('Filter all items', () => {
         cy.get('.border-solid > :nth-child(3) > :nth-child(2) > div > :nth-child(1)').click()
     })
-    
+
+    it('Open the cart', () => {
+        cy.get(':nth-child(4) > .my-1').click()
+        
+    })
 })

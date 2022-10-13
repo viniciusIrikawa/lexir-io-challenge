@@ -17,12 +17,11 @@ const GridProducts = () => {
       alert ('This product is already in the cart!')
     }
     else{
-      setIsActive({productName: product.name, active: false})
       setCartItems([...cartItems, product])     
       setIsActive({productName: product.name, active: true})
     }    
   }
-
+  
   return (
     <div>
       <ul className='container my-10 md:grid md:grid-cols-4 md:my-0'>
@@ -37,7 +36,7 @@ const GridProducts = () => {
                 <span className='price text-[#6B6B6B]'> €{item.price} </span>
               </div>
                 <span className='price text-[#afaeae]'> {item.category} </span>
-              <button className='py-1 px-10 mt-2 w-full bg-[#7dec7d] rounded-md' 
+              <button className='py-1 px-10 mt-2 w-full bg-[#505050] text-[#eeeeee] rounded-md' 
                       onClick={() => {
                         addProduct(item)}}> Add to cart 
               </button>

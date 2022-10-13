@@ -1,0 +1,31 @@
+;FFMETADATA1
+[CHAPTER]
+TIMEBASE=1/1000
+START=8376
+END=11518
+title=Ecommerce Visit the page
+[CHAPTER]
+TIMEBASE=1/1000
+START=14096
+END=14667
+title=Ecommerce Filter by Vodka
+[CHAPTER]
+TIMEBASE=1/1000
+START=14415
+END=15393
+title=Ecommerce Add Vodka to the cart
+[CHAPTER]
+TIMEBASE=1/1000
+START=16143
+END=16375
+title=Ecommerce Filter by Gin
+[CHAPTER]
+TIMEBASE=1/1000
+START=11445
+END=16612
+title=Ecommerce Add Gin to the cart
+[CHAPTER]
+TIMEBASE=1/1000
+START=21546
+END=21803
+title=Ecommerce Filter all items

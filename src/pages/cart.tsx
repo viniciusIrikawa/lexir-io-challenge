@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useContext } from "react";
 import { ProductContext } from '../Context/ContextProducts'
-import {Product} from '../types/typeProducts';
+import { Product } from '../types/typeProducts';
 
 export default function Cart() {
 
@@ -22,6 +22,7 @@ export default function Cart() {
 
   const increment = (idItem: number) => {
     const findItem:any = cartItems.find( item => item.id === idItem );
+    console.log(findItem)
 
     if(findItem.quantity < 10){
       setCartItems(cartItems.map( item => item.id === idItem ? 
@@ -29,7 +30,6 @@ export default function Cart() {
     }
     
   }
-  console.log(cartItems);
 
   const remove = (idItem: number) => {
     const items:any = cartItems.filter( item => item.id !== idItem );
