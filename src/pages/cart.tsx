@@ -12,7 +12,7 @@ export default function Cart() {
   let subtotalCartPrice = 0;
 
   const decrement = (idItem: number) => {
-    const findItem:any = cartItems.find( item => item.id === idItem );
+    const findItem:Product = cartItems.find( item => item.id === idItem )!;
 
     if(findItem.quantity > 0){ 
       setCartItems(cartItems.map( item => item.id === idItem ? 
@@ -21,8 +21,7 @@ export default function Cart() {
   }
 
   const increment = (idItem: number) => {
-    const findItem:any = cartItems.find( item => item.id === idItem );
-    console.log(findItem)
+    const findItem:Product = cartItems.find( item => item.id === idItem )!;
 
     if(findItem.quantity < 10){
       setCartItems(cartItems.map( item => item.id === idItem ? 
@@ -32,7 +31,7 @@ export default function Cart() {
   }
 
   const remove = (idItem: number) => {
-    const items:any = cartItems.filter( item => item.id !== idItem );
+    const items:Product[] = cartItems.filter( item => item.id !== idItem );
     setCartItems(items);
   }
 
