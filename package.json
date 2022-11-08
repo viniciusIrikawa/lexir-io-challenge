@@ -6,13 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "cypress:open": "cypress open",
     "lint": "next lint"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.10",
     "flowbite": "^1.5.3",
     "flowbite-react": "^0.1.11",
-    "cypress:open": "cypress open",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0"

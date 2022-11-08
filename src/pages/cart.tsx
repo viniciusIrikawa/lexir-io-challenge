@@ -12,11 +12,8 @@ export default function Cart() {
   const discountValue = -5;
 
   const [inputPromoCode, setInputPromoCode] = useState("");
-  const [chip, setChip] = useState("");
-  const [discount, setDiscount] = useState(0);
 
-
-  const { cartItems, setCartItems } = useContext(ProductContext)
+  const { cartItems, setCartItems, chip, setChip, discount, setDiscount } = useContext(ProductContext)
   let subtotalCartPrice = 0;
 
   const decrementItem = (idItem: number) => {
@@ -133,13 +130,12 @@ export default function Cart() {
                         <td className="py-3 text-center"> €{item.price * item.quantity} </td>
                       </tr>
                     )
-                    
                   }
                   )}
                 </tbody>
               </table>
-
-            )}
+            )
+          }
 
           <aside className={`${cartItems.length === 0 && "hidden"} md:col-span-1 md:h-[270px] mt-8 md:mt-0 relative `}>
             <div className="w-full flex justify-between items-start">
