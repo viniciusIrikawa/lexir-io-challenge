@@ -1,7 +1,7 @@
 ## 🤔About
 
 This is an Ecommerce project called `Nice Drink`, made with React JS, Next Js, Typescript and Tailwind CSS.
-It have two pages... the first page it's a Home Page that have a grid products and filter buttons. The second page it's a Cart Page that have all items added (or not).
+There are two pages: the first page is a Home Page that features a grid of products and filter buttons. The second page is a Cart Page that displays all added (or non-added) items.
 
 ## 🗒️Requirement
 - Node.Js
