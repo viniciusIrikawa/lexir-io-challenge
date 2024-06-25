@@ -3,6 +3,8 @@
 This is an Ecommerce project called `Nice Drink`, made with React JS, Next Js, Typescript and Tailwind CSS.
 There are two pages: the first page is a Home Page that features a grid of products and filter buttons. The second page is a Cart Page that displays all added (or non-added) items.
 
+Link: [lexir-io-challenge-pink.vercel.app/](https://lexir-io-challenge-pink.vercel.app/)
+
 ## 🗒️Requirement
 - Node.Js
 - Node_modules archive (run `npm install` command on terminal)
